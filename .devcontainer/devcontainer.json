@@ -2,8 +2,8 @@
 	"name": "VSCode Bluesky Plugin",
 	"dockerComposeFile": ["docker-compose.yaml"],
 	"service": "vscode_bluesky_plugin",
-	"workspaceFolder": "/home/bun/app",
 	"shutdownAction": "stopCompose",
+	"workspaceFolder": "/home/bun/app",
 	"remoteUser": "bun",
 	"mounts": [
 		"source=${env:HOME}/home/bun/.ssh,target=/.ssh,type=bind,consistency=cached,readonly"
@@ -41,9 +41,13 @@
 				"biomejs.biome",
 				"bradlc.vscode-tailwindcss",
 				"eamodio.gitlens",
-				"ms-vscode.vscode-typescript-next"
+				"ms-vscode.vscode-typescript-next",
+				"connor4312.esbuild-problem-matchers",
+				"ms-vscode.extension-test-runner"
 			],
 			"settings": {
+				// Turn off tsc task auto detection since we have the necessary tasks as npm scripts
+				"typescript.tsc.autoDetect": "off",
 				"betterTypeScriptErrors.prettify": true,
 				"debug.internalConsoleOptions": "neverOpen",
 				"diffEditor.diffAlgorithm": "advanced",
