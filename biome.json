@@ -1,0 +1,10 @@
+{
+	"linter": {
+		"rules": {
+			"recommended": false,
+			"style": { "useBlockStatements": "warn" },
+			"suspicious": { "noDoubleEquals": "warn" }
+		},
+		"ignore": ["**/out", "**/dist", "**/*.d.ts"]
+	}
+}
